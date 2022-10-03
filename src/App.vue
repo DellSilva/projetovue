@@ -11,9 +11,6 @@
 
   export default {
     name: "App",
-    components: [
-        MainComponent
-    ],
     components: { MainComponent, LifeCycle }
 }
 </script>

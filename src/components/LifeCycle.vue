@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Meu nome: </h1>
+        <h1>Meu nome: {{nome}}</h1>
     </div>
 </template>
 
@@ -11,6 +11,12 @@
             return {
                 nome: 'Ainda não sei'
             }
+        },
+        created() {
+         this.nome = 'Dell'
+        },
+        mounted() {
+         this.nome = 'Dell Silva'
         }
     }
 </script>
