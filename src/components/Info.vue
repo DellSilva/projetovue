@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>{{ email }}</p>
         <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
         <p v-else>Estou em busca de novas oportunidades!</p>
         <p>Utilizo as seguintes tecnologias para back-end:</p>
@@ -13,7 +14,7 @@
         <div>
             <button @click="showEmail">{{ textoBotao }}</button>
         </div>
-        <p v-show="mostrar_email">Mande uma mensagem para: matheus@email.com</p>
+        <p v-show="mostrar_email">Mande uma mensagem para: adelmo.dev@gmail.com</p>
         <p>Para acessar meu portfólio <a v-bind:href="link">basta clicar aqui</a></p>
         <Picture />
     </div>
@@ -26,13 +27,15 @@ export default {
     data() {
         return {
             esta_trabalhando: false,
-            mostrar_email: false,
-            email: "adelmo.dev@gmail.com",
+            mostrar_email: false,            
             link: "https://www.google.com.br/",
             textoBotao: 'Mostrar e-mail',
             backend_technologies: ["JavaScript", "PHP", "Python"],
             frontend_technologies: ["HTML", "CSS", "Vue"]
         };
+    },
+    props:{
+        email: String
     },
     methods: {
         showEmail() {

@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Meu nome é {{ nome }}</h2> 
-        <Info/>
+        <Info :email="email"/>
     </div>
 </template>
 
@@ -17,7 +17,8 @@
     },
         data() {
             return {
-                nome: 'Dell'
+                nome: 'Dell',
+                email: 'adelmo.dev@gmail.com'
             }
         }
     }
